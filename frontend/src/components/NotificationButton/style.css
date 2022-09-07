@@ -1,0 +1,11 @@
+button {
+    background: url('../../assets/img/dsmeta-notification-symb.svg');
+    background-color: rgba(255, 107, 114, 0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #FF6B72;
+    border-radius: 10px;
+    cursor: pointer;
+}

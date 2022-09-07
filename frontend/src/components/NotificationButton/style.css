@@ -1,4 +1,4 @@
-button {
+.dsmeta-notify-button {
     background: url('../../assets/img/dsmeta-notification-symb.svg');
     background-color: rgba(255, 107, 114, 0.1);
     background-position: center;

@@ -16,7 +16,7 @@
     margin-bottom: 20px;
 }
 
-.dsmeta-card-header input {
+.dsmeta-card-header .dsmeta-datepicker {
     background-color: #1B2531;
     border: 1px solid #384459;
     border-radius: 5px;

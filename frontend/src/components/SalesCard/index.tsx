@@ -1,13 +1,33 @@
+import { registerLocale } from  "react-datepicker";
+
+import ptBR from 'date-fns/locale/pt-BR';
+import DatePicker from 'react-datepicker';
+
 import NotificationButton from '../NotificationButton';
 import './style.css';
+import 'react-datepicker/dist/react-datepicker.css';
+
+registerLocale('ptBR', ptBR);
 
 const SalesCard = () => {
+
     return (
         <div className="dsmeta-card">
             <div className="dsmeta-card-header">
                 <h1>Vendas</h1>
-                <input type="text" value="01/02/2022" />
-                <input type="text" value="30/04/2022" />
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => { }}
+                    className="dsmeta-datepicker"
+                    dateFormat="dd/MM/yyyy"
+                    locale={ptBR} />
+                    
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => { }}
+                    className="dsmeta-datepicker"
+                    dateFormat="dd/MM/yyyy"
+                    locale={ptBR} />
             </div>
 
             <table className="dsmeta-card-table">

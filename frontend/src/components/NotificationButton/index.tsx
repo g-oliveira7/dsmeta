@@ -1,7 +1,7 @@
 import './style.css';
 
 const NotificationButton = () => {
-    return <button></button>
+    return <button className="dsmeta-notify-button"></button>
 }
 
 export default NotificationButton;

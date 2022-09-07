@@ -1,0 +1,56 @@
+.dsmeta-card {
+    background-color: #283142;
+    border-radius: 10px;
+    padding: 35px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+    
+.dsmeta-card-header {
+    max-width: 300px;
+}
+
+.dsmeta-card-header h1 {
+    color: #676FFF;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dsmeta-card-header input {
+    background-color: #1B2531;
+    border: 1px solid #384459;
+    border-radius: 5px;
+    height: 46px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #9AAABE;
+    padding-left: 20px;
+}
+
+.dsmeta-card-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dsmeta-card-table thead {
+    height: 55px;
+    vertical-align: center;
+    color: #E9E9E9;
+}
+
+.dsmeta-card-table tbody {
+    color: #CFCFCF;
+    font-weight: normal;
+    font-size: 14px; 
+    font-weight: 300;
+}
+
+.dsmeta-card-table tbody tr {
+    height: 74px;
+    border-top: 1px solid #5F6E82;
+    text-align: center;
+}
+
+.dsmeta-card-table tbody tr:nth-of-type(odd) {
+    background-color: #242C3B;
+}

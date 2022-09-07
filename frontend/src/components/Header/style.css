@@ -1,0 +1,26 @@
+.dsmeta-header {
+    background: linear-gradient(#102347, #181818);
+    display: flex;
+    justify-content: center;
+}
+
+.dsmeta-header-logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #E9E9E9;
+}
+
+.dsmeta-header-logo img {
+    width: 235px;
+    margin-top: 28px;
+    margin-bottom: 15px;
+}
+
+.dsmeta-header-logo p {
+    margin-bottom: 28px;
+}
+
+.dsmeta-header-logo p, a {
+    color: #CFCFCF;
+}

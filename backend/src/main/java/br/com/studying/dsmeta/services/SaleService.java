@@ -22,4 +22,8 @@ public class SaleService {
 		
 		return saleRepository.findSales(min, max, pageable);
 	}
+	
+	public Sale findSaleId(Long id) {
+		return saleRepository.findById(id).orElse(null);
+	}
 }

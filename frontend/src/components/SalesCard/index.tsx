@@ -74,7 +74,7 @@ const SalesCard = () => {
                                 <td className="show992">{sale.visited}</td>
                                 <td className="show992">{sale.deals}</td>
                                 <td>R$ {sale.amount.toFixed(2)}</td>
-                                <td><NotificationButton /></td>
+                                <td><NotificationButton saleId={sale.id} /></td>
                             </tr>
                         )
                     })}

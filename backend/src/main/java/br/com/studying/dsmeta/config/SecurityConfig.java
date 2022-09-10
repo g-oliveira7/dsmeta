@@ -24,13 +24,13 @@ public class SecurityConfig {
 		http.authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
 		return http.build();
 	}
-	
+
 	@Bean
-	public CorsConfigurationSource corsConfiguration() {
+	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
+		configuration.setAllowedOriginPatterns(Arrays.asList("http://localhost:5173"));
 		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-		configuration.addAllowedOrigin("http://localhost");
-		
+
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", configuration);
 		return source;

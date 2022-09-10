@@ -28,7 +28,7 @@ public class SecurityConfig {
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOriginPatterns(Arrays.asList("http://localhost:5173"));
+		configuration.setAllowedOriginPatterns(Arrays.asList("https://sds-dsmeta.netlify.app"));
 		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

@@ -23,11 +23,14 @@ const SalesCard = () => {
     const [sales, setSales] = useState<Sale[]>([]);
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/sales`)
+        const dmin = minDate.toISOString().split("T")[0];
+        const dmax = maxDate.toISOString().split("T")[0];
+
+        axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
             .then(resp => {
                 setSales(resp.data.content);
             })
-    }, []);
+    }, [minDate, maxDate]);
 
     return (
         <div className="dsmeta-card">
@@ -64,13 +67,13 @@ const SalesCard = () => {
                 <tbody>
                     {sales.map(sale => {
                         return (
-                            <tr key={ sale.id }>
-                                <td className="show992">#{ sale.id }</td>
-                                <td className="show576">{ new Date(sale.date).toLocaleDateString() }</td>
-                                <td>{ sale.sellerName }</td>
-                                <td className="show992">{ sale.visited }</td>
-                                <td className="show992">{ sale.deals }</td>
-                                <td>R$ { sale.amount.toFixed(2) }</td>
+                            <tr key={sale.id}>
+                                <td className="show992">#{sale.id}</td>
+                                <td className="show576">{new Date(sale.date).toLocaleDateString()}</td>
+                                <td>{sale.sellerName}</td>
+                                <td className="show992">{sale.visited}</td>
+                                <td className="show992">{sale.deals}</td>
+                                <td>R$ {sale.amount.toFixed(2)}</td>
                                 <td><NotificationButton /></td>
                             </tr>
                         )
